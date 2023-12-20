@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="features">
+    <h1>Удаление позиции</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>Действительно хотите удалить позицию?</p>
+        <button type="submit"> Удалить позицию </button>
+    </form>
+</div>
+{% endblock %}

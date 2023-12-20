@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}?20181208" type="text/css">
+</head>
+<body>
+<div class="main-nav">
+    <img src="{% static 'img/jesuslogo.svg' %}" alt="logo" class="logo">
+    <nav>
+        <li><a href="{% url 'home'%}">Главная</a></li>
+        <li><a href="{% url 'about'%}">О нашем магазине</a></li>
+        <li><a href="{% url 'service'%}">Обслуживание</a></li>
+    </nav>
+    <a class="addbtn" href="{% url 'add'%}">Добавить позицию</a>
+</div>
+<div class="container">{% block content%} {% endblock %}</div>
+</body>
+
+</html>

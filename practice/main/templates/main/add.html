@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title%}Добавить позицию{% endblock %}
+{% block tab-name %}Добавить позицию{% endblock %}
+{% block content%}
+    <h1>Добавить позицию</h1>
+    <form method="post" class="add-form">
+        {% csrf_token%}
+        {{form.name}} <br>
+        {{form.type}}<br>
+        {{form.gramm}}<br>
+        {{form.sostav}}<br>
+        {{form.price}}<br>
+        <button type="submit">Добавить</button>
+        <span>{{error}}</span>
+    </form>
+{% endblock %}
